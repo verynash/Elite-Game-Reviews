@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html" class="home-btn home-btn-full">E.G. Reviews</a>
+            <a href="index.html" class="home-btn home-btn-short">E.G.R.</a>
+        </header>
+
+        <form action="newsletter.php" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>First Name: <span class="req">*</span><input type="text" name="first-name" placeholder="James" autocomplete="given-name" title="First name is required." required></label>
+                <label>Email Address: <span class="req">*</span><input type="email" name="email" autocomplete="email" title="Email is required." placeholder="jamesbond1@email.com" required></label>
+                <label>Date of Birth: <span class="req">*</span><input type="date" name="dob" title="Date of birth is required." required></label>
+            </fieldset>
+            <br>
+            <label>"I agree to receive newsletters from Elite Game Reviews" <span class="req">*</span><input type="checkbox" id="agree" name="agree" value="agree" required></label>
+            <button type="submit" value="submit">Subscribe</button>
+        </form>
+        <footer>&copy; Zachary Barrett, 2023</footer>
+    </div>
+</body>
+</html>

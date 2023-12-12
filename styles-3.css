@@ -1,0 +1,191 @@
+:root {
+    --primary-background-color: #040d12;
+    --header-color: #FF3131;
+    --header-font-size: 24px;
+    --header-font-family: 'Acme', sans-serif;
+    --footer-font-color: #6b6b6b;
+    --content-font-family: "Fira sans", sans-serif;
+    --content-font-color: #f3f3f3;
+    --content-font-size: 18px;
+    --input-background-color: #252525;
+    --input-active-background-color: #1a1a1a;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--primary-background-color);
+}
+
+header {
+    width: 100vw;
+    color: var(--header-color);
+    position: fixed;
+}
+
+.home-btn {
+    margin-left: px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 225px;
+    height: 70px;
+    padding: 8px;
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: var(--header-color);
+    color: var(--primary-background-color);
+    border-radius: 0 0 12px;
+    box-shadow: 0 0 5px var(--header-color),
+                0 0 25px var(--header-color);
+                -webkit-box-reflect: below 1px linear-gradient(transparent);    
+
+}
+
+.home-btn-short {
+    display: none;
+}
+
+form {
+    margin-top: auto;
+    max-width: 400px;
+    padding: 10px 20px;
+    color: var(--content-font-color);
+    font-family: var(--content-font-family);
+}
+
+fieldset {
+    margin: 10px 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--input-background-color);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+legend {
+    font-size: 24px;
+}
+
+input {
+    outline: none;
+    margin-bottom: 8px;
+}
+
+input[type="checkbox"] {
+    margin-left: 8px;
+    width: auto;
+}
+
+input {
+    padding: 0.6rem;
+    width: 100%;
+    height: auto;
+    background-color: var(--input-background-color);
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input:user-invalid {
+    border: 2px solid var(--header-color);
+}
+
+input:focus:not(:user-invalid) {
+    outline: 2px solid var(--header-color);
+    background-color: var(--input-active-background-color);
+}
+
+
+.req {
+    color: var(--header-color);
+}
+
+button {
+    width: 100%;
+    height: 85px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--header-color);
+    transition: .25s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    cursor: pointer;
+    background-color: var(--primary-background-color);
+    border: none;
+    border-radius: 0px;
+}
+
+button:hover, button:active, button:focus {
+    background-color: var(--header-color);
+    color: var(--primary-background-color);
+    box-shadow: 0 0 5px var(--header-color),
+                0 0 25px var(--header-color),
+                0 0 50px var(--header-color);
+                -webkit-box-reflect: below 1px linear-gradient(transparent);
+}
+
+:is(fieldset, form) {
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 8px;
+    color: var(--footer-font-color);
+    background-color: #040d12;
+    width: 100vw;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .home-btn-full{
+        display: none;
+    }
+
+    .home-btn-short {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        background-color: var(--header-color);
+        color: var(--primary-background-color);
+        box-shadow: 0 0 5px var(--header-color),
+                    0 0 25px var(--header-color);
+                    -webkit-box-reflect: below 1px linear-gradient(transparent);    
+    }
+}
